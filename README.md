@@ -10,3 +10,19 @@ Github alternatives:
 Mercurial
 Helix core
 Bazaar
+
+Difference between git fetch and git pull:
+Git fecth only gets changes from the remote repository wiouth merging it into your working branch. It basicaly allows you to view the changes.
+Git pull gets the changes from the remote repository and merges them into your branch automatically
+
+Git rebase:
+Git rebase in simply terms is a command that is used to align new changes made in a branch in front of the updaed main branch. When git rebase is used, the commits made in the new branch and simply put directly into the main branch without a merge happening between the two branches which would bring about a new commit. This would make the commi history cleaner as the commits all appear linear.  
+The command for git rebase is :
+    git rebase my_branch
+(note: 'my_branch' is the name of the new branch)
+
+Git cherry pick:
+Git cherry pick is used to move one or more specific commits from one branch to another. This can be used when the developer wants to pull a specific change from a branch wothout pulling all changes. He/she speicifies the particular commit or commits he wants out of all and he commits are added to his branch using the commit ID.  
+The command for git cherry pick is:  
+    git cherry-pick *commit_id*  
+(note: 'commit_id' is the id of the commit needed which is always a number eg git cherry-pick 843842)
